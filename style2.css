@@ -760,7 +760,7 @@ header ul a:hover{
     transition: 0.5s;
 }
 
-/* Sidebar Open ANimation */
+/* Sidebar Open Animation */
 .sidebar.open-sidebar{
     animation: openSideBarAnimation 1.0s forwards;
 }
@@ -774,7 +774,7 @@ header ul a:hover{
     }
 }
 
-/* Sidebar close ANimation */
+/* Sidebar close Animation */
 
 .sidebar.close-sidebar{
     animation: closeSideBarAnimation 1.5s forwards;
@@ -810,331 +810,207 @@ header ul a:hover{
     }
 }
 
-
-@media screen and (max-width: 1200px){
-
-    .hero-info h1{
-        font-size: 40px;
-        max-width: 400px;
-        line-height: 40px;
+/* Remove blur on mobile & tablet */
+@media screen and (max-width: 1024px) {
+    header {
+        backdrop-filter: none !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
     }
 
-    .hero-info P{
-        max-width: 300px;
+    header ul {
+        backdrop-filter: none !important;
     }
 
-    .hero-vid-box{
-        right: 0;
+    .sidebar {
+        backdrop-filter: none !important;
     }
 
-    .hero-vid-box video{
-        height: 500px;
-    }
-
-    .skills-video-box{
-        right: 0%;
-    }
-
-    .skills-video-box video{
-        height: 500px;
-    }
-
-    .info-cards{
-        grid-template-columns: auto;
-    }
-
-    .card:nth-child(3){
-        grid-column: span 2;
-        height: 70vh;
-    }
-
-    .info-cards .card h1{
-        font-size: 20px;
-    }
-
-    .info-cards .card:nth-child(3) h1{
-        bottom: 25%;
-    }
-
-    .card video{
-        height: 60%;
-
-        margin-top: 5%;
-    }
-
-    .my-project{
-        margin-bottom: 200px;
-        scale: 0.8;
-    }
-
-    .contact-section .section-title {
-        left: 30%;
+    .autoBlur, 
+    .autoDisplay,
+    .fadein-left {
+        animation: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 
-@media screen and (max-width: 700px){
-
-    header {
-        position: fixed;
-        height: 50px;
-    }
-
-    header ul{
-        display: none;
-    }
-
-    header .box-icons{
-        display: none;
-    }
-
-    header h1{
-        font-size: 25px;
-    }
-
-    .robotfrontpage video{
-        margin-top: -16%;
-    }
-
-    .menu-icon{
-        display: inline;
-    }
-
-    .autoBlur{
-        animation: none;
-    }
-    
-    .hero{
-        flex-direction: column;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right:0;
-    }
-
-    .hero-info{
-        bottom: 5%;
-    }
-
-    .scroll-down{
-        bottom: 5%;
-    }
-
-    .hero-info h1{
-        line-height: 50px;
-    }
-
-    .hero-vid-box{
-        height: 200px;
-        top: 5%;
-        right: 5%;
-    }
-
-    .hero .skills-video-box{
-        height: 200px;
-        top: 5%;
-    }
-
-    .info-cards{
-        grid-template-columns: auto;
-    }
-
-    .card:nth-child(3){
-        grid-column: span 2;
-        height: 70vh;
-    }
-
-    .card video{
-        width: 100%;
-    }
-    
-    .container{
-        height: 100%;
-    }
-
-    .project-vidbox video{
-        width: 250px;
-        margin-left: -100px;
-    }
-
-    .project-info{
-        overflow: hidden;
-        padding-left: 0;
-        margin-left: -50px;
-    }
-
-    .project-info h1{
-        font-size: 20px;
-        max-width: 200px;
-        text-wrap: wrap;
-    }
-
-    .project-info p{
-        font-size: 10px;
-        text-wrap: wrap;
-        max-width: 200px;
-        min-width: 0;
-    }
-
-    .project-info button{
-        padding: 5px 10px;
-    }
-
-    .my-project{
-        margin-bottom: 600px;
-    }
-
-    .project-card{
-        flex-direction: column;
-        margin-left: 25%;
-        gap: 30px;
-    }
-    
-    .project-vidbox{
-        min-width: 200px;
-    }
-
-    .project-info{
-        width: 85%;
-    }
-
-    .project-info h1{
-        text-wrap: nowrap;
-    }
-
-    .project-info p{
-        max-width: 300px;
-    }
-
-    .python{
-        top: 15%;
-        left: 18%;
-    }
-
-    .python h1{
-        margin-bottom: 0;
-        margin-top: 70px;
-    }
-
-    .java{
-        top: 50%;
-        left: 18%;
-    }
-
-    .java h1{
-        margin-bottom: 0;
-    }
-
-    .skills-box h1{
-        margin-bottom: 0;
-        margin-top: 70px;
-    }
-
-    .slider{
-        bottom: 0;
-    }
-
-    .slider img{
-        width: 60%;
-    }
-
-    .slider .list .item img{
-        width: 70%;
-    }
-
-    .project-vidbox{
-        min-width: 200px;
-    }
-}   /* ← FIXED: CLOSED MISSING BRACE */
-
-
-/* MOBILE VERY SMALL (480px) */
-@media screen and (max-width: 480px) {
-
-    .hero .skills-video-box {
-        display: none;
-    }
-
-    .robotfrontpage video {
-        overflow: hidden;
-        width: 140%;
-        margin-top: -27%;
-    }
-
-    .left {
-        scale: 0.9;
-        margin-left: -30px;
-    }
-
-    .left h2 {
-        font-size: 20px;
-    }
+/* Tablet (Landscape + Portrait) */
+@media screen and (max-width: 1024px) {
 
     .hero {
-        scale: 0.9;
-    }
-
-    .hero-info{
-        bottom: 15%;
-    }
-
-    .hero-info h1{
-        font-size: 35px;
-    }
-
-    .scroll-down{
-        bottom: 15%;
-        left: 60%;
-    }
-
-    .section-title {
-        font-size: 25px;
-    }
-
-    .info-cards{
-        display: flex;
         flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .hero-info {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .skills-video-box {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .skills-video {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr 1fr;
     }
 
     .card {
-        min-height: 20rem;
+        height: auto;
+        min-height: 280px;
     }
 
-    .card h1{
-        bottom: 85%;
-        font-size: 10px;
-    }
-
-    .card p{
-        bottom: 30%;
+    .my-project {
+        height: auto;
     }
 
     .project-card {
-        height: 80%;
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .project-info p{
-        margin-bottom: 15px;
+    .project-vidbox {
+        width: 100%;
+        min-width: 0;
     }
 
-    .project-info{
-        margin-left: -80px;
-    }
-
-    .skills-box{
-        height: 120vh;
-        margin-right: 30px;
-    }
-
-    .slider{
-        bottom: 0%;
-    }
-
-    .reference-section img{
-        max-width: 80%;
-        max-height: 80%;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        width: 20%;
+    .project-vidbox video {
+        width: 100%;
         height: auto;
+    }
+
+    .project-info {
+        width: 90%;
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 700px) {
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .hero-info {
+        position: static;
+        text-align: center;
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    .hero-info h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .skills-video-box {
+        display: none; /* Prevents layout breaking */
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: auto;
+        min-height: 240px;
+    }
+
+    .card:nth-child(3),
+    .card:nth-child(4) {
+        grid-column: span 1;
+        height: auto;
+    }
+
+    .my-project {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .project-vidbox {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .project-vidbox video {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .project-info h1,
+    .project-info p {
+        width: 100%;
+        max-width: 100%;
+        text-wrap: wrap;
+    }
+
+    .project-info button {
+        padding: 10px 20px;
+    }
+}
+
+
+
+/* EXTRA SMALL MOBILE */
+@media screen and (max-width: 480px) {
+
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero-info h1 {
+        font-size: 28px;
+    }
+
+    .project-info {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .project-info p {
+        font-size: 12px;
+    }
+
+    .card h1 {
+        font-size: 16px;
+        bottom: auto;
+        top: 10px;
+    }
+
+    .card p {
+        bottom: 10px;
+        font-size: 12px;
+    }
+
+    .slider {
+        width: 100%;
+        bottom: 5%;
+    }
+
+    .slider .item img {
+        width: 100%;
     }
 }
