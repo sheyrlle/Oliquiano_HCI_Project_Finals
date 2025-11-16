@@ -835,38 +835,50 @@ header ul a:hover{
     }
 }
 
-/* Tablet (Landscape + Portrait) */
-@media screen and (max-width: 1024px) {
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding-top: 120px;
+@media screen and (max-width: 1200px){
+    .robotfrontpage video{
+        margin-top: -20%;
     }
 
-    .hero-info {
-        position: static;
-        margin-bottom: 20px;
+    .hero-info h1{
+        font-size: 40px;
+        max-width: 400px;
+        line-height: 40px;
     }
 
-    .skills-video-box {
-        position: static;
-        margin-top: 20px;
+    .hero-info P{
+        max-width: 300px;
     }
 
-    .skills-video {
-        width: 100%;
-        height: auto;
+    .skills-video-box{
+        right: 0%;
     }
 
-    .info-cards {
-        grid-template-columns: 1fr 1fr;
+    .skills-video-box video{
+        height: 500px;
     }
 
-    .card {
-        height: auto;
-        min-height: 280px;
+    .info-cards{
+        grid-template-columns: auto;
+    }
+
+    .card:nth-child(3){
+        grid-column: span 2;
+        height: 70vh;
+    }
+
+    .info-cards .card h1{
+        font-size: 20px;
+    }
+
+    .info-cards .card:nth-child(3) h1{
+        bottom: 25%;
+    }
+
+    .card video{
+        height: 60%;
+
+        margin-top: 5%;
     }
 
     .my-project {
@@ -896,47 +908,74 @@ header ul a:hover{
     }
 }
 
-/* MOBILE */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px){
+    header {
+        position: fixed;
+        height: 50px;
+    }
 
-    .hero {
+    header ul{
+        display: none;
+    }
+
+    header .box-icons{
+        display: none;
+    }
+
+    .menu-icon{
+        display: inline;
+    }
+
+    .blackhole-box video {
+        width: 100%;
+        margin-top: -15%;
+    }
+
+    .autoBlur{
+        animation: none;
+    }
+    
+    .hero{
         flex-direction: column;
-        height: auto;
-        padding-top: 100px;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right:0;
+        
+    }
+    .hero-info{
+        bottom: 5%;
     }
 
-    .hero-info {
-        position: static;
-        text-align: center;
-        margin-top: 40px;
-        width: 90%;
+    .scroll-down{
+        bottom: 5%;
     }
 
-    .hero-info h1 {
-        font-size: 32px;
-        line-height: 40px;
+    .hero .skills-video-box{
+        height: 200px;
+        top: 5%;
     }
 
-    .skills-video-box {
-        display: none; /* Prevents layout breaking */
+
+
+    .info-cards{
+        grid-template-columns: auto;
     }
 
-    .info-cards {
-        grid-template-columns: 1fr;
+    .card:nth-child(3){
+        grid-column: span 2;
+        height: 70vh;
     }
 
-    .card {
-        height: auto;
-        min-height: 240px;
+    .card video{
+        width: 100%;
+    }
+    
+    .container{
+        height: 100%;
     }
 
-    .card:nth-child(3),
-    .card:nth-child(4) {
-        grid-column: span 1;
-        height: auto;
-    }
-
-    .my-project {
+        .my-project {
         width: 100%;
         height: auto;
         margin-top: 100px;
@@ -967,25 +1006,112 @@ header ul a:hover{
         text-wrap: wrap;
     }
 
-    .project-info button {
-        padding: 10px 20px;
+
+    .my-project{
+        margin-bottom: 600px;
+    }
+
+    .python{
+        top: 15%;
+        left: 18%;
+    }
+
+    .python h1{
+        margin-bottom: 0;
+        margin-top: 70px;
+    }
+
+    .java{
+        top: 50%;
+        left: 18%;
+    }
+
+    .java h1{
+        margin-bottom: 0;
+    }
+
+    .slider .list .item img{
+        width: 70%;
+    }
+
+    .contact-section{
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .footer{
+        font-size: 10px;
+    }
+
+    .social-box{
+        margin-left: -90px;
     }
 }
 
 
-
-/* EXTRA SMALL MOBILE */
 @media screen and (max-width: 480px) {
 
+    .hero .skills-video-box {
+        display: none;
+        
+    }
+
+    .robotfrontpage video {
+        overflow: hidden;
+    }
+
+    .blackhole-box video {
+        width: 140%;
+        margin-top: -27%;
+
+    }
+
+    .left {
+        scale: 0.9;
+        margin-left: -30px;
+    }
+
+    .left h2 {
+        font-size: 20px;
+    }
+
     .hero {
-        padding-top: 80px;
+        scale: 0.9;
     }
 
-    .hero-info h1 {
-        font-size: 28px;
+    .hero-info{
+        bottom: 15%;
     }
 
-    .project-info {
+    .hero-info h1{
+        font-size: 35px;
+    }
+
+    .scroll-down{
+        bottom: 15%;
+        left: 60%;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .info-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        min-height: 20rem;
+    }
+
+    .card h1{
+        bottom: 30%;
+        font-size: 5px;
+    }
+
+   .project-info {
         margin-left: 0 !important;
         width: 100%;
     }
@@ -994,23 +1120,37 @@ header ul a:hover{
         font-size: 12px;
     }
 
-    .card h1 {
-        font-size: 16px;
-        bottom: auto;
-        top: 10px;
+
+    .skills-box{
+        height: 120vh;
+        margin-right: 30px;
     }
 
-    .card p {
-        bottom: 10px;
-        font-size: 12px;
+    .slider{
+        bottom: 0%;
     }
 
-    .slider {
-        width: 100%;
-        bottom: 5%;
+    .contact-section{
+        scale: 0.9;
+        height: 120vh;
     }
 
-    .slider .item img {
-        width: 100%;
+    .contact-section .section-title {
+        top: -30px;
+        left: 25%;
     }
+
+    .footer{
+        padding: 15px;
+    }
+
+    .footer h1{
+        max-width: 150px;
+    }
+
+    .footer .box-icons{
+        gap: 10px;
+    }
+
+
 }
